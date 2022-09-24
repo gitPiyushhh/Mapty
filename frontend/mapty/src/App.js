@@ -1,13 +1,13 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Boot from './components/boot/boot.jsx';
 
 function App() {
   return (
     <div className="App">
-      <h2>Hello mapty</h2>
+    <Boot/>
     </div>
   );
 }
 
 export default App;
-
