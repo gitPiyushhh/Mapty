@@ -1,14 +1,15 @@
 import './boot.scss';
-import img from '../../Drawables/Car crash.gif';
+import img from '../../Drawables/logo-removebg-preview.png';
 
 
 const Boot = () => {
     return (
-        <div>
-            
-            {/* <video src={img} type="video/mp4"></video> */}
-            <img src={img} alt="img" />
-            
+        <div className="root-container">
+            <div className="container">
+                <img src={img} alt="img" className="image"/>
+                <h1 className="heading">Mapty</h1>
+                <h6 className="sub-heading">Geolocation</h6>
+        </div>
         </div>
     )
 }
