@@ -1,0 +1,66 @@
+:root {
+  --color-primary: #aa5fff;
+  --color-secondary: #f9f4e8;
+  --color-tertiary: ##fbffff;
+
+  // Backgrounds
+  --bg-light: #2d2e32;
+  --bg-dark: #212121;
+
+  //Universals
+  --white: #fff;
+  --black: #000;
+
+  //Shadow variables
+  --drop-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --drop-shadow-big: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  --inner-shadow: 0px 5px 15px 0px #00000040 inset;
+
+  //Grid & calculative variables
+  --grid-width: 112rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  overflow-x: hidden !important;
+  background-color: var(--bg-light);
+
+  /* SCROLLBAR */
+  /* Let's get this party started */
+  &::-webkit-scrollbar {
+    width: 10px;
+    overflow: scroll !important;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 10px;
+  }
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1rem=10px; 10px/16px = 62.5%
+  overflow-x: hidden !important;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
